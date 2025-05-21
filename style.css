@@ -1,0 +1,121 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Cairo', sans-serif;
+    /* خلفية قلوب متدرجة مع تأثيرات جميلة */
+    min-height: 100vh;
+    background: linear-gradient(135deg, #ffe0f7 0%, #f9c6e9 50%, #b6e6ff 100%);
+    position: relative;
+    overflow-x: hidden;
+}
+.container {
+    max-width: 420px;
+    margin: 48px auto 0 auto;
+    background: rgba(255,255,255,0.93);
+    border-radius: 32px;
+    box-shadow: 0 8px 32px #e0b3d1cc;
+    padding: 36px 18px 24px 18px;
+    text-align: center;
+    position: relative;
+}
+h1 {
+    color: #e75480;
+    font-size: 2.6rem;
+    margin-bottom: 0.5em;
+    letter-spacing: 1px;
+}
+.friend-message {
+    color: #3a3a3a;
+    font-size: 1.18rem;
+    margin-bottom: 2em;
+    background: #f7e6ffcc;
+    border-radius: 16px;
+    padding: 18px 12px;
+    box-shadow: 0 2px 8px #f3c6e7;
+    line-height: 2.1;
+}
+.audio-section {
+    margin: 2em 0 1em 0;
+}
+.yt-section {
+    margin: 1.2em 0 1em 0;
+}
+.penguins-row {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 48px;
+    margin: 36px 0 0 0;
+}
+.penguin-svg {
+    width: 100px;
+    height: 130px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    position: relative;
+    animation: penguin-bounce 2.5s infinite;
+}
+.pink-penguin { animation-delay: 0.2s; }
+.blue-penguin { animation-delay: 1.2s; }
+@keyframes penguin-bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-18px); }
+}
+.music-btn {
+    position: fixed;
+    top: 18px;
+    left: 18px;
+    z-index: 1000;
+    background: #fff8fc;
+    border: 2px solid #e75480;
+    color: #e75480;
+    padding: 8px 18px;
+    border-radius: 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 2px 8px #f3c6e7;
+    backdrop-filter: blur(4px);
+    transition: background 0.2s, color 0.2s;
+}
+.music-btn:hover {
+    background: #ffe0f7;
+    color: #b83260;
+}
+.love-heart {
+    position: fixed;
+    top: -60px;
+    z-index: 1;
+    pointer-events: none;
+    animation: fall-heart 7s linear forwards, sway-heart 2.5s ease-in-out infinite alternate;
+    opacity: 0.85;
+}
+@keyframes fall-heart {
+    0% { top: -60px; opacity: 0.7; }
+    90% { opacity: 1; }
+    100% { top: 110vh; opacity: 0; }
+}
+@keyframes sway-heart {
+    0% { transform: translateX(0) scale(1) rotate(-8deg); }
+    50% { transform: translateX(30px) scale(1.08) rotate(8deg); }
+    100% { transform: translateX(-30px) scale(0.95) rotate(-8deg); }
+}
+.bg-glow {
+    position: fixed;
+    z-index: 0;
+    pointer-events: none;
+    border-radius: 50%;
+    filter: blur(60px) brightness(1.2);
+    opacity: 0.25;
+    animation: bg-glow-move 12s ease-in-out infinite alternate;
+}
+@keyframes bg-glow-move {
+    0% { left: 10vw; top: 10vh; }
+    100% { left: 70vw; top: 60vh; }
+}
+@media (max-width: 600px) {
+    .container { padding: 10px 2vw; }
+    .penguins-row { gap: 16px; }
+    .penguin-svg { width: 60px; height: 80px; }
+}
+.container, .friend-message {backdrop-filter: blur(1.5px);}

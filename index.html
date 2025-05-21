@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عيد ميلاد عرين</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+    .animate-pop { animation: popIn 1.1s cubic-bezier(.68,-0.55,.27,1.55) both; }
+    @keyframes popIn { 0% { transform: scale(0.7); opacity:0; } 80% { transform: scale(1.1); } 100% { transform: scale(1); opacity:1; } }
+    .animate-fadein { animation: fadeIn 1.7s ease both; }
+    @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+    .animate-slidein { animation: slideIn 1.2s cubic-bezier(.68,-0.55,.27,1.55) both; }
+    @keyframes slideIn { from { transform: translateY(60px); opacity:0; } to { transform: translateY(0); opacity:1; } }
+    .animate-bounce { animation: bounceIn 1.5s cubic-bezier(.68,-0.55,.27,1.55) both; }
+    @keyframes bounceIn { 0% { transform: scale(0.7) translateY(60px); opacity:0; } 60% { transform: scale(1.1) translateY(-10px); } 100% { transform: scale(1) translateY(0); opacity:1; } }
+    .footer-note { text-align:center; margin-top:40px; margin-bottom:10px; }
+    .footer-note a:hover { text-decoration:underline; color:#e75480; }
+    /* تأثيرات القلوب المتساقطة */
+    @keyframes sway {
+        0% { transform: translateY(0) rotate(0); }
+        50% { transform: translateY(-10px) rotate(-5deg); }
+        100% { transform: translateY(0) rotate(0); }
+    }
+    .love-heart {
+        position: fixed;
+        top: -10%;
+        animation: sway 3s infinite;
+        pointer-events: none;
+    }
+    /* تأثيرات الخلفية المتحركة */
+    .bg-glow {
+        position: fixed;
+        border-radius: 50%;
+        pointer-events: none;
+        animation: glow-animation 6s infinite;
+    }
+    @keyframes glow-animation {
+        0% { transform: scale(0.9); opacity: 0.7; }
+        50% { transform: scale(1.1); opacity: 1; }
+        100% { transform: scale(0.9); opacity: 0.7; }
+    }
+    </style>
+</head>
+<body>
+    <audio id="birthday-music" preload="auto">
+        <source src="https://cdn.pixabay.com/audio/2022/07/26/audio_124b7e7e7e.mp3" type="audio/mpeg">
+        <!-- لحن هادئ وجميل: Calm Piano by Lesfm (Pixabay License) -->
+    </audio>
+    <button id="toggle-music" class="music-btn"><span id="music-icon">🔊</span> تشغيل الموسيقى</button>
+    <div class="container">
+        <h1 class="animate-pop">عيد ميلاد شريكتي🎉</h1>
+        <div class="friend-message animate-fadein">
+            كل سنة وأنتِ مش بس صديقة، أنتِ أختي اللي اختارتها الأيام وقلبي!<br>
+            مهما كبرت الأيام وتغيرت الظروف، بتضلي دايمًا أقرب إنسانة لروحي، سندي وضحكتي وأمان أسراري.<br>
+            يا رب تضلّي مبسوطة، وتحققي كل أحلامك، وتلاقي في كل يوم سبب جديد للفرح.<br>
+            وجودك بحياتي نعمة كبيرة، وكل لحظة معك بتعلم فيها معنى الصداقة الحقيقية.<br>
+            شكراً على كل لحظة وقفتِ فيها جنبي، على كل ضحكة ودمعة شاركناها، على دعمك اللي ما إلو حدود.<br>
+            بحبك من القلب يا عرين، وإن شاء الله كل سنة بتكون أحلى من اللي قبلها، وكل عيد ميلاد وإنتِ بخير وسعادة ونجاح.<br>
+            <br>
+            يمكن الدنيا بتاخدنا أوقات، ويمكن الظروف بتغير أماكننا، بس وجودك بحياتي ثابت زي الشمس اللي بتنور كل يوم جديد.<br>
+            أنتِ الشخص اللي بفضفضله بدون خوف، واللي بضحك معه من قلبي، واللي بحس معه بالأمان مهما كان العالم حوالي صعب.<br>
+            كل ذكرى بينا محفورة بقلبي، من أول ضحكة لآخر دمعة، من كل مغامرة صغيرة وكل سر كبير.<br>
+            لو بدي أكتب عنك، ما بكفيك كتاب ولا حتى ألف كلمة، لأنك ببساطة أروع من كل الحكي.<br>
+            بتمنى لكِ أيام مليانة حب ونجاح، وتحققي كل أحلامك الكبيرة والصغيرة، وتضلي دايمًا مصدر الفرح والطاقة الحلوة لكل اللي حواليك.<br>
+            الله يخليكي لي يا أحن وأطيب صديقة، ويديم صداقتنا سنين طويلة مليانة ضحك وذكريات حلوة.<br>
+            <br>
+            لو في يوم حسّيتي إنك لحالك أو الدنيا ضاقت فيكي، تذكري دايمًا إنك مش لوحدك، أنا دايمًا جنبك مهما صار.<br>
+            كل سنة وإنتِ بخير يا عرين، وكل سنة وإنتِ أقرب وأغلى وأحن صديقة بالدنيا كلها.<br>
+            <br>
+            أوقات كتير بحس إن وجودك بحياتي هو أكبر هدية من ربنا، لأنك الشخص اللي مهما حكيت معه بظل مرتاح، واللي بيفهمني من نظرة عيوني.<br>
+            أنتِ اللي بتعرفي أسراري قبل ما أحكيها، وبتحسي فيا حتى لو ما حكيت، وبتدعمي أحلامي حتى لو كانت بعيدة.<br>
+            كل لحظة ضحكنا فيها مع بعض، وكل مغامرة صغيرة أو كبيرة، وكل يوم عشنا فيه تفاصيلنا، صار جزء من روحي وذكرياتي الحلوة.<br>
+            لو جمعت كل كلمات الشكر والحب في الدنيا، ما رح توفيكي حقك، لأنك ببساطة أخت وصديقة وأمان العمر كله.<br>
+            <br>
+            بتمنى تضلّي دايمًا مبسوطة، وتحققي كل اللي بتتمنيه، وتلاقي في كل يوم سبب جديد يخلي قلبك يضحك.<br>
+            مهما بعدتنا الأيام أو شغلتنا الحياة، صداقتنا رح تضل محفورة بقلبي للأبد.<br>
+            <br>
+            كل سنة وإنتِ بخير يا عرين، وكل سنة وإنتِ النور اللي بيضوي أيامي، وكل سنة وإنتِ صديقتي اللي ما بتتعوض.<br>
+            <span style="color:#e75480;font-weight:bold;">شريكك معتز💙</span>
+        </div>
+        <div class="audio-section animate-slidein">
+            <span>اضغطي هنا لسماع أغنيتكِ الأولى المفضلة (قابلتك امتى - آمال ماهر):</span>
+            <div class="yt-section">
+                <a href="https://www.youtube.com/watch?v=Dzbded6Hlb4" target="_blank" style="display:inline-block;width:100%;background:#ffe0f7;padding:18px 0;border-radius:12px;text-align:center;font-weight:bold;color:#e75480;font-size:1.1rem;text-decoration:none;">اضغطي هنا لسماع أغنيتكِ الأولى المفضلة 🎼 قابلتك امتى - آمال ماهر</a>
+            </div>
+            <span style="display:block;margin-top:18px;">اضغطي هنا لسماع أغنيتكِ الثانية المفضلة (حكاية ناي - ياسمين علي):</span>
+            <div class="yt-section">
+                <a href="https://www.youtube.com/watch?v=E6fXUkms8pU" target="_blank" style="display:inline-block;width:100%;background:#b6e6ff;padding:18px 0;border-radius:12px;text-align:center;font-weight:bold;color:#2a6fbe;font-size:1.1rem;text-decoration:none;">اضغطي هنا لسماع أغنيتكِ الثانية المفضلة 🎵 حكاية ناي - ياسمين علي</a>
+            </div>
+            <span style="display:block;margin-top:18px;">اضغطي هنا لسماع أغنيتكِ الثالثة المفضلة (يا ريتني - زياد برجي):</span>
+            <div class="yt-section">
+                <a href="https://www.youtube.com/watch?v=C2FxlDo2iQE" target="_blank" style="display:inline-block;width:100%;background:#ffe0f7;padding:18px 0;border-radius:12px;text-align:center;font-weight:bold;color:#e75480;font-size:1.1rem;text-decoration:none;">اضغطي هنا لسماع أغنيتكِ الثالثة المفضلة 🎶 يا ريتني - زياد برجي</a>
+            </div>
+        </div>
+        <div class="penguins-row animate-bounce">
+            <div class="penguin-svg pink-penguin" title="بطريق عرين"></div>
+            <div class="penguin-svg blue-penguin" title="بطريق معتز"></div>
+        </div>
+        <footer class="footer-note animate-fadein">
+            <div style="margin-top:32px;font-size:1.1rem;color:#b83260;font-weight:bold;">
+                هذا الموقع صُمم بكل حب من <span style="color:#2a6fbe">معتز</span> خصيصاً لصديقته <span style="color:#e75480">عرين</span> بمناسبة عيد ميلادها 🎂<br>
+                <a href="https://www.instagram.com/lil.m3tz/" target="_blank" style="color:#2a6fbe;text-decoration:none;font-weight:normal;display:inline-block;margin-top:8px;">تابع معتز على الانستغرام</a>
+            </div>
+        </footer>
+    </div>
+    <script src="birthday.js"></script>
+    <script>
+    // رسم بطريق كيوت SVG
+    function getPenguinSVG(color) {
+        if(color === 'pink') return `<svg viewBox='0 0 80 110' width='100' height='130'>
+            <ellipse cx='40' cy='65' rx='32' ry='38' fill='#fff'/>
+            <ellipse cx='40' cy='50' rx='28' ry='32' fill='#f9c6e9'/>
+            <ellipse cx='40' cy='50' rx='22' ry='26' fill='#fff'/>
+            <ellipse cx='30' cy='48' rx='4' ry='7' fill='#222'/>
+            <ellipse cx='50' cy='48' rx='4' ry='7' fill='#222'/>
+            <ellipse cx='40' cy='70' rx='10' ry='5' fill='#f9c6e9'/>
+            <polygon points='36,65 44,65 40,80' fill='#ffb6e6'/>
+            <ellipse cx='18' cy='90' rx='8' ry='16' fill='#f9c6e9'/>
+            <ellipse cx='62' cy='90' rx='8' ry='16' fill='#f9c6e9'/>
+            <ellipse cx='40' cy='100' rx='7' ry='4' fill='#ffb6e6'/>
+            <ellipse cx='28' cy='38' rx='2' ry='1.5' fill='#fff'/>
+            <ellipse cx='52' cy='38' rx='2' ry='1.5' fill='#fff'/>
+        </svg>`;
+        return `<svg viewBox='0 0 80 110' width='100' height='130'>
+            <ellipse cx='40' cy='65' rx='32' ry='38' fill='#fff'/>
+            <ellipse cx='40' cy='50' rx='28' ry='32' fill='#b6e6ff'/>
+            <ellipse cx='40' cy='50' rx='22' ry='26' fill='#fff'/>
+            <ellipse cx='30' cy='48' rx='4' ry='7' fill='#222'/>
+            <ellipse cx='50' cy='48' rx='4' ry='7' fill='#222'/>
+            <ellipse cx='40' cy='70' rx='10' ry='5' fill='#b6e6ff'/>
+            <polygon points='36,65 44,65 40,80' fill='#2a6fbe'/>
+            <ellipse cx='18' cy='90' rx='8' ry='16' fill='#b6e6ff'/>
+            <ellipse cx='62' cy='90' rx='8' ry='16' fill='#b6e6ff'/>
+            <ellipse cx='40' cy='100' rx='7' ry='4' fill='#2a6fbe'/>
+            <ellipse cx='28' cy='38' rx='2' ry='1.5' fill='#fff'/>
+            <ellipse cx='52' cy='38' rx='2' ry='1.5' fill='#fff'/>
+        </svg>`;
+    }
+    document.querySelector('.pink-penguin').innerHTML = getPenguinSVG('pink');
+    document.querySelector('.blue-penguin').innerHTML = getPenguinSVG('blue');
+
+    // رسم قلوب حب متساقطة بشكل صحيح فوق كل شيء
+    function createHeart() {
+        const heart = document.createElement('div');
+        heart.className = 'love-heart';
+        const colors = ['#e75480', '#ffb6e6', '#b83260', '#f9c6e9', '#b6e6ff', '#ff8fa3'];
+        const color = colors[Math.floor(Math.random()*colors.length)];
+        const left = Math.random() * 95;
+        heart.style.left = left + 'vw';
+        heart.style.width = (36 + Math.random()*24) + 'px';
+        heart.style.height = (32 + Math.random()*18) + 'px';
+        heart.style.zIndex = 10000;
+        heart.style.pointerEvents = 'none';
+        heart.style.position = 'fixed';
+        heart.style.top = '-60px';
+        heart.style.animation = 'fall-heart 7s linear forwards, sway-heart 2.5s ease-in-out infinite';
+        heart.style.opacity = '0.85';
+        heart.innerHTML = `<svg width='100%' height='100%' viewBox='0 0 50 45' style='overflow:visible;'><path d='M24.9,42.7C12.2,30.6,2,22.1,2,13.5C2,6.7,7.7,2,13.5,2c3.6,0,7.1,1.8,9.4,4.7C25.4,3.8,28.9,2,32.5,2C38.3,2,44,6.7,44,13.5c0,8.6-10.2,17.1-23.1,29.2z' fill='${color}'/></svg>`;
+        document.body.appendChild(heart);
+        setTimeout(()=>heart.remove(), 7000);
+    }
+    setInterval(createHeart, 900);
+    for(let i=0;i<8;i++) setTimeout(createHeart, i*400);
+
+    // رسم دوائر glow متدرجة شفافة بالخلفية (إصلاح البقع الملونة)
+    function createGlow() {
+        const glow = document.createElement('div');
+        glow.className = 'bg-glow';
+        const colors = ['#ffe0f7', '#b6e6ff', '#e75480', '#f9c6e9'];
+        const size = 180 + Math.random()*120;
+        glow.style.width = size + 'px';
+        glow.style.height = size + 'px';
+        glow.style.left = (10 + Math.random()*70) + 'vw';
+        glow.style.top = (10 + Math.random()*70) + 'vh';
+        glow.style.position = 'fixed';
+        glow.style.background = `radial-gradient(circle at 50% 50%, ${colors[Math.floor(Math.random()*colors.length)]} 0%, transparent 80%)`;
+        glow.style.opacity = '0.09';
+        glow.style.zIndex = 0;
+        glow.style.pointerEvents = 'none';
+        document.body.appendChild(glow);
+        setTimeout(()=>glow.remove(), 14000);
+    }
+    setInterval(createGlow, 7000);
+    for(let i=0;i<1;i++) setTimeout(createGlow, i*2000);
+
+    // إضافة keyframes للقلب والخلفية إذا لم تكن موجودة
+    const style = document.createElement('style');
+    style.innerHTML = `
+    @keyframes fall-heart {
+        0% { top: -60px; opacity: 0.7; }
+        90% { opacity: 1; }
+        100% { top: 110vh; opacity: 0; }
+    }
+    @keyframes sway-heart {
+        0% { transform: translateX(0) scale(1) rotate(-8deg); }
+        50% { transform: translateX(30px) scale(1.08) rotate(8deg); }
+        100% { transform: translateX(-30px) scale(0.95) rotate(-8deg); }
+    }
+    `;
+    document.head.appendChild(style);
+    </script>
+</body>
+</html>
